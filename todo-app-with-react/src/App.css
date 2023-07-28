@@ -276,15 +276,57 @@ body {
 }
 
 .buttons button:nth-child(3) {
-  color: #9495A5;
+  color: #9495a5;
 }
 
-.todo-footer > button{
-  color: #494C6B;
-text-align: right;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-letter-spacing: -0.194px;
+.todo-footer > button {
+  color: #494c6b;
+  text-align: right;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.194px;
+}
+
+.todo-btn {
+  border: 1px solid black;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+input[type="checkbox"] {
+  top: 50%;
+  left: 24px;
+  position: absolute;
+  transform: translateY(-50%);
+  background-color: transparent;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+border: 1px solid #D1D2DA;
+cursor: pointer;
+
+}
+
+input[type="checkbox"]:hover{
+  border: 1px solid #C058F3;
+}
+
+input[type="checkbox"]:checked {
+  background: linear-gradient(to bottom right, #55DDFF, #C058F3);
+  border: none;
+  color: #fff;
+}
+
+input[type="checkbox"]:checked + p {
+  color: #D1D2DA;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+ text-decoration: line-through;
 }
