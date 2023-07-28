@@ -32,15 +32,14 @@ function Provider({ children }) {
   };
 
   const handleCheckboxChange = (todoId) => {
-    
-    const updatedTodos = todos.map((todo) =>
-      todo.id === todoId ? { ...todo, completed: !todo.completed } : todo
+    setTodos((prevTodos) =>
+      prevTodos.map((todo) =>
+        todo.id === todoId ? { ...todo, completed: !todo.completed } : todo
+      )
     );
-    setTodos(updatedTodos);
   };
 
-
-  const sharedData = {todos , todo , handleSubmit , handleDelete ,handleCheckboxChange, setTodo  }
+  const sharedData = {todos , todo , handleSubmit , handleDelete ,handleCheckboxChange, setTodo , setTodos }
 
   return (
     <MyContext.Provider value={sharedData}>
