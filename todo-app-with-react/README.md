@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Screenshot
 
-![desktop-light](./screenshots/dekstop-light.png)
-![desktop-dark](./screenshots/dekstop-dark.png)
+![desktop-light](./screenshots/desktop-light.png)
+![desktop-dark](./screenshots/desktop-dark.png)
 ![mobile-light](./screenshots/mobile-light.png)
 ![mobile-dark](./screenshots/mobile-dark.png)
 
