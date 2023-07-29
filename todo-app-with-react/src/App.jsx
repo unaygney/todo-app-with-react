@@ -2,18 +2,33 @@ import sun from "./assets/icon-sun.svg";
 import moon from "./assets/icon-moon.svg";
 import TodoList from "./components/TodoList";
 import "./App.css";
-import { useContext } from "react";
+import { useContext  , useState , useEffect } from "react";
 import MyContext from "./context/task";
 function App() {
 
   const {handleSubmit , todo , setTodo } = useContext(MyContext);
+  const [darkMode, setDarkMode] = useState(false);
 
 
+  const addToggleDarkMode = () => {
+    setDarkMode((prevDarkMode) => !prevDarkMode);
+  };
+  
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  }, [darkMode]);
+
+
+console.log(darkMode)
   return (
     <div className="container">
       <div className="upper-container">
         <h1>TODO</h1>
-        <img src={sun} alt="sun" />
+        <img src={darkMode ? moon : sun} alt="sun" onClick={addToggleDarkMode} />
       </div>
   
       <div className="input-container">

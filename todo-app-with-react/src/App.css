@@ -151,6 +151,8 @@ button {
   background-color: transparent;
 }
 
+
+
 body {
   font-family: "Josefin Sans", sans-serif;
   background-color: var(--bg-color);
@@ -163,10 +165,52 @@ body {
   align-items: center;
 }
 
+/* Dark Mode */
+
+body.dark-mode {
+  background-image: url(./assets/bg-desktop-dark.jpg);
+  background-color: #171823;;
+}
+body.dark-mode .container .input-container{
+  background-color: #171823;
+}
+
+body.dark-mode .container .input-container input{
+  background-color: #25273D;
+}
+
+body.dark-mode .container .input-container .submit-btn svg circle{
+stroke: #4D5067;
+fill: #25273D;;
+
+}
+
+body.dark-mode .container .todos-container{
+  background: #25273D;;
+  box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.50);
+}
+
+body.dark-mode .container .todos-container .todo:not(:first-child){
+  border: 1px solid #393A4B;
+}
+
+body.dark-mode .container .todos-container .todo .checkbox{
+  border: 1px solid #393A4B;
+}
+
+body.dark-mode .container .todos-container .todo .checkbox:hover{
+  border: 1px solid hsla(192, 100%, 67%);
+}
+
+body.dark-mode .container .todos-container .todo .todo-text{
+  color: #C8CBE7;
+}
+
 .container {
   width: 541px;
   height: 600px;
   margin-top: 70px;
+  position: relative;
 }
 
 .container .upper-container {
@@ -329,4 +373,76 @@ input[type="checkbox"]:checked + p {
   font-weight: 400;
   letter-spacing: -0.25px;
  text-decoration: line-through;
+}
+
+
+@media (max-width : 478px ){
+  body{
+    background-image: url(./assets/bg-mobile-light.jpg);
+    background-size: contain;
+
+  }
+
+  body.dark-mode{
+    background-image: url(./assets/bg-mobile-dark.jpg);
+  }
+
+  body.dark-mode .buttons{
+background-color: #25273D;
+  }
+  body.dark-mode form{
+    background-color: #25273D;
+    border-radius: 5px;
+  }
+
+  body.dark-mode .input-container {
+    box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.50);
+    background-color: #25273D;
+  }
+  .container{
+    width: 327px;
+    height: 100%;
+  }
+
+  .upper-container h1{
+    font-size: 24px;
+  }
+
+  .container .input-container {
+    margin-top: 20px;
+  }
+
+  .input-container form {
+    height: 48px;
+
+  }
+
+  .input-container form input{
+    padding-left: 58px;
+  }
+
+  input::placeholder{
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.167px;
+    
+  }
+
+  .buttons{
+    position: absolute;
+    width: 100%;
+    height: 48px;
+    background-color: red;
+    bottom: -70px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.50);
+    border-radius: 5px;
+    
+  }
+
+  
+
 }

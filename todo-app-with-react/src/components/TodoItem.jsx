@@ -18,8 +18,6 @@ function TodoItem({ todo  }) {
    
 
 
-  console.log(todo)
-
   return (
     <>
       <input

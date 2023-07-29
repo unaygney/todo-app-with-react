@@ -24,6 +24,23 @@ function Provider({ children }) {
       setTodo("");
     }
   };
+  const getClearCompleted = () => {
+    const clearCompleted = todos.filter((filterTodo) => !filterTodo.completed)
+    setTodos(clearCompleted)
+  }
+
+  const getActive = () => {
+    setShowActive(true);
+  }
+
+  const getAll = () => {
+    setShowActive(false)
+  }
+
+
+  const [showActive, setShowActive] = useState(false);
+  const filteredTodos = showActive ? todos.filter((todo) => !todo.completed) : todos;
+
 
   const handleDelete = (deleteTodoId) => {
   
@@ -39,7 +56,7 @@ function Provider({ children }) {
     );
   };
 
-  const sharedData = {todos , todo , handleSubmit , handleDelete ,handleCheckboxChange, setTodo , setTodos }
+  const sharedData = {todos , todo , handleSubmit , handleDelete ,handleCheckboxChange, setTodo , setTodos  , getClearCompleted , getActive , getAll , filteredTodos ,showActive ,setShowActive}
 
   return (
     <MyContext.Provider value={sharedData}>
