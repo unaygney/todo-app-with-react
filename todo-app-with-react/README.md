@@ -42,8 +42,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/unaygney/todo-app-with-react/tree/main/todo-app-with-react)
+- Live Site URL: [Add live site URL here](https://warm-bunny-5f9aad.netlify.app/)
 
 ## My process
 
